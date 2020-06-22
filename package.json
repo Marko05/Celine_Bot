@@ -9,14 +9,19 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "canvas": "^2.6.1",
     "discord.js": "^12.2.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "figlet": "^1.4.0",
     "fs": "0.0.1-security",
+    "http": "0.0.1-security",
     "imageapi.js": "^1.0.3",
     "ms": "^2.1.2",
     "quick.db": "^7.1.1",
+    "reinstall": "^2.0.0",
     "request-promise-native": "^1.0.8",
-    "weather-js": "^2.0.0"
+    "simple-youtube-api": "^5.2.1",
+    "weather-js": "^2.0.0",
+    "ytdl-core": "^2.1.7"
   }
 }
