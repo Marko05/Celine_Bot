@@ -1,14 +1,16 @@
 const Discord = require(`discord.js`);
 const { prefix , token } = require(`./config.json`)
 const bot = new Discord.Client()
+const Client = new Discord.Client()
 const { readdirSync } = require('fs');
 const delay = (msec) => new Promise((response) => setTimeout(response, msec));
 const name = `Marko`
+const Canvas = require("canvas")
 
 
-bot.on(`ready`, () =>{ 
+bot.on(`ready`, () => { 
 
-    bot.user.setActivity(`;help` , ({type: "PLAYING"}))
+bot.user.setActivity(`;help | ${bot.users.cache.size} Users` ,({type: "WATCHING"}))
 })
 bot.on('message', async msg => {
     if(msg.author.bot || !msg.content.startsWith(prefix)) return;
@@ -35,6 +37,15 @@ bot.on('ready', async () => {
     console.log(`Everything is loaded and the bot works with a latency of ${bot.ws.ping}ms.`)
 
 })
+
+bot.on('guildMemberAdd', async member => {
+        const channel = member.guild.channels.cache.find(ch => ch.name === '〔🚪〕welcome');
+        if (!channel) return;
+    
+
+    
+        channel.send(`Welcome to the Official Support Server of Celine, ${member}!\n\nIf you want to be verify, go to #〔✅〕verify.\n\nIf you have questions for the bot, feel free to ask our staff.\n\nEnjoy your Stay! 😄`);
+    });
 
 
 bot.login(token)

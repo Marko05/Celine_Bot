@@ -10,7 +10,7 @@ module.exports.run = async(bot, msg, args) => {
     const Embed = new MessageEmbed()
       .setTitle(`Wuff :dog:`)
       .setURL(`https://reddit.com/r/${subreddit}`)
-      .setColor("BROWN")
+      .setColor("PURPLE")
       .setImage(img);
     msg.channel.send(Embed);
   }

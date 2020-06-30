@@ -10,7 +10,7 @@ module.exports.run = async(bot, msg, args) => {
       const user = msg.mentions.members.first()
       
       if(!user) {
-        return msg.channel.send("Please mention someone!")
+        return msg.channel.send("Please mention someone")
       }
       
       if(msg.mentions.users.first().bot) {
@@ -22,13 +22,13 @@ module.exports.run = async(bot, msg, args) => {
       }
       
       if(user.id === msg.guild.owner.id) {
-        return msg.channel.send(":x: **|** You can´t warn the Owner!-_-")
+        return msg.channel.send(":x: **|** You can´t warn the Owner!")
       }
       
       const reason = args.slice(1).join(" ")
       
       if(!reason) {
-        return msg.channel.send("Please give a reason!")
+        return msg.channel.send("Please give a reason")
       }
       
       let warnings = db.get(`warnings_${msg.guild.id}_${user.id}`)
@@ -40,11 +40,11 @@ module.exports.run = async(bot, msg, args) => {
       if(warnings === null) {
         db.set(`warnings_${msg.guild.id}_${user.id}`, 1)
         user.send(`You have been warned in **${msg.guild.name}** for ${reason}`)
-        await msg.channel.send(`:white_check_mark: **|** Successfully warned **${msg.mentions.users.first().username}** for ${reason}!`)
+        await msg.channel.send(`:white_check_mark: **|** Successfully warned **${msg.mentions.users.first().username}** for **${reason}**!`)
       } else if(warnings !== null) {
           db.add(`warnings_${msg.guild.id}_${user.id}`, 1)
          user.send(`You have been warned in **${msg.guild.name}** for ${reason}`)
-        await msg.channel.send(`:white_check_mark: **|** Successfully warned **${msg.mentions.users.first().username}** for ${reason}!`)
+        await msg.channel.send(`:white_check_mark: **|** Successfully warned **${msg.mentions.users.first().username}** for **${reason}**!`)
       }
       
     

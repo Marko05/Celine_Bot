@@ -6,8 +6,13 @@ const helpembed = new Discord.MessageEmbed()
 .setColor("PURPLE")
 .setTitle("Fun")
 .setThumbnail(bot.user.displayAvatarURL())
-.setDescription(`**\`cat\`** , **\`dog\`** , **\`giraffe\`**`)
-
+.setDescription(`Bot Prefix: **\`;\`**`)
+.addField(`**\`cat\`**` , `\`Shows a random cat picture\``)
+.addField(`**\`dog\`**` , `\`Shwos a random dog picture\``)
+.addField(`**\`poll\`**` , `\`Creates a Poll\``)
+.addField(`**\`giveaway\`**` , `\`Creates a cool giveaway!\``)
+.addField(`**\`joke\`**` , `\`Tells you a funny joke\``)
+.setTimestamp()
 
 
 msg.channel.send(helpembed)

@@ -6,13 +6,10 @@ const helpembed = new Discord.MessageEmbed()
 .setColor("PURPLE")
 .setTitle("Music")
 .setThumbnail(bot.user.displayAvatarURL())
-.setDescription(`The Bot prefix is \`;\`\n\n`)
-.addField(`**\`ban\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`kick\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`warn\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`mute\`**`, `**\`[@user][reason]\`**`)
-.addField(`**\`unmute\`**`, `**\`[@user]\`**`)
-.addField(`**\`clear\`**` , `**\`[amount of messages]\`**`)
+.setDescription(`Bot Prefix: **\`;\`**`)
+.addField(`**\`join\`**` , `\`Joins to your channel\``)
+.setTimestamp()
+
 
 msg.channel.send(helpembed)
 

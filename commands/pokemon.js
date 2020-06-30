@@ -9,10 +9,10 @@ const options = {
     json: true
     
   }
-  
-  msg.channel.send(":hourglass_flowing_sand: **|** Fetching Informtion for API...").then(msg => {
-    get(options).then(body => {
-      
+  if (!args[0]) {
+    msg.channel.send("Please specify a pokemon");
+  }
+
       let embed = new MessageEmbed()
       .setAuthor(body.name, `https://courses.cs.washington.edu/courses/cse154/webservices/pokedex/${body.images.typeIcon}`)
       .setDescription(body.info.description)
@@ -22,9 +22,15 @@ const options = {
       
       msg.channel.send(embed)
       msg.delete()
-    })
-  })
+  }
+
+
+
+
+
+
   
-}
+  
+
   
   

@@ -10,7 +10,7 @@ module.exports.run = async(bot, msg, args) => {
     const Embed = new MessageEmbed()
       .setTitle(`Meow :heart_eyes:`)
       .setURL(`https://reddit.com/r/${subreddit}`)
-      .setColor("RANDOM")
+      .setColor("PURPLE")
       .setImage(img);
     msg.channel.send(Embed);
   

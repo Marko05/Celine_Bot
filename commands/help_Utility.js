@@ -6,13 +6,14 @@ const helpembed = new Discord.MessageEmbed()
 .setColor("PURPLE")
 .setTitle("Utility")
 .setThumbnail(bot.user.displayAvatarURL())
-.setDescription(`The Bot prefix is \`;\`\n\n`)
-.addField(`**\`ban\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`kick\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`warn\`**` , `**\`[@user][reason]\`**`)
-.addField(`**\`mute\`**`, `**\`[@user][reason]\`**`)
-.addField(`**\`unmute\`**`, `**\`[@user]\`**`)
-.addField(`**\`clear\`**` , `**\`[amount of messages]\`**`)
+.setDescription(`Bot Prefix: **\`;\`**`)
+.addField(`**\`suggestion\`**` , `\`Sends a suggestion to a #suggestions channel\``)
+.addField(`**\`serverinvite\`** **\`[Channel ID]\`**` , `\`Creates an invite for the channel\``)
+.addField(`**\`invite\`**` , `\`Invites the bot to your server\``)
+.addField(`**\`timer\`** **\`[time]\`**` , `\`Sets a timer\``)
+.setTimestamp()
+
+
 
 msg.channel.send(helpembed)
 
