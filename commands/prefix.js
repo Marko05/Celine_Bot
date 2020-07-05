@@ -4,27 +4,23 @@ const default_prefix = (";")
 module.exports.run = async(bot, msg, args) => {
 
   if(!msg.member.hasPermission("ADMINISTRATOR")) {
-    return msg.channel.send("You are not allowed or do not have permission to change prefix")
+    return msg.channel.send(":x: **|** You can´t use this command!")
   }
   
   if(!args[0]) {
-    return msg.channel.send("Please give the prefix that you want to set")
+    return msg.channel.send("Specify a prefix!")
   } 
   
   if(args[1]) {
-    return msg.channel.send("You can not set prefix a double argument")
-  }
-  
-  if(args[0].length > 3) {
-    return msg.channel.send("You can not send prefix more than 3 characters")
+    return msg.channel.send(":x: **|** You can´t set a prefix with double argument!")
   }
   
   if(args.join("") === default_prefix) {
     db.delete(`prefix_${msg.guild.id}`)
-   return await msg.channel.send("Reseted Prefix ✅")
+   return await msg.channel.send(":white_check_mark: **|** Successfully reseted Prefix.")
   }
   
   db.set(`prefix_${msg.guild.id}`, args[0])
-await msg.channel.send(`Seted Bot Prefix to ${args[0]}`)
+await msg.channel.send(`:white_check_mark: **|** Successfully Seted the Bot Prefix to \`${args[0]}\``)
   
 }

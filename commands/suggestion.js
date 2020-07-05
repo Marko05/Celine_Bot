@@ -6,7 +6,9 @@ const sChannel = msg.guild.channels.cache.find(channel => channel.name === "sugg
 if(!sChannel) {
   return msg.channel.send(":x: **|** I can´t find any channel called \`suggestions\`.") 
 }
-// send to reports channel and add tick or cross  
+if (!args [0]) { return msg.channel.send (`Please specify a suggestion`)
+}
+
 msg.channel.send(":white_check_mark: **|** Successfully submitted your suggestion.")
 const suggestembed = new Discord.MessageEmbed()
 .setFooter("")

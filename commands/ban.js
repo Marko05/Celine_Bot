@@ -2,10 +2,10 @@ const Discord = require(`discord.js`)
 
 module.exports.run = async(bot, msg, args) => {
 
-if(!msg.member.hasPermission('BAN_MEMBERS')) return msg.reply('**:x: | You can\'t use this command!**');
+if(!msg.member.hasPermission('BAN_MEMBERS')) return msg.channel.send(':x: **|** You can\'t use this command!');
 
 var user = msg.mentions.users.first();
-if(!user) return msg.reply('Please mention someone!');
+if(!user) return msg.channel.send('Please mention someone to ban');
 
 var member;
 
@@ -17,11 +17,11 @@ try {
 
 if(member){
     
-    if(member.hasPermission('MANAGE_MESSAGES')) return msg.reply('**:x: | You cannot ban this person!**');
+    if(member.hasPermission('MANAGE_MESSAGES')) return msg.channel.send(':x: **|** You cannot ban this person!');
 }
 
 var reason = args.splice(1).join(' ');
-if(!reason) return msg.reply('Please give a reason!');
+if(!reason) return msg.channel.send('Please specify a reason');
 
 var channel = msg.guild.channels.cache.find(c => c.name === 'potato');
 

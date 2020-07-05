@@ -6,7 +6,7 @@ module.exports.run = async(bot, msg, args) => {
     if(!msg.member.hasPermission('ADMINISTRATOR')) return msg.reply(':x: **|** You can\'t use this command!');
     
     if(!args[0]) return msg.channel.send(`Please specify your time.`)
-    if(!args[0].endsWith("d")&&!args[0].endsWith("h")&&!args[0].endsWith("m")) return msg.channel.send(`**You did not use the correct formatting for the time.**`)
+    if(!args[0].endsWith("d")&&!args[0].endsWith("h")&&!args[0].endsWith("m")) return msg.channel.send(`You did not use the correct formatting for the time.`)
     if(isNaN(args[0][0])) return msg.channel.send(`:x: **|** That is not a number!`)
     
     let channel = msg.mentions.channels.first()

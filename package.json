@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@discordjs/opus": "^0.3.2",
     "axios": "^0.19.2",
     "canvacord": "^3.0.0",
     "canvas": "^2.6.1",
@@ -24,8 +25,9 @@
     "google-translate-api": "^2.3.0",
     "http": "0.0.1-security",
     "humanize-duration": "^3.23.1",
-    "imageapi.js": "^1.0.3",
+    "imageapi.js": "^1.0.4",
     "imdb-api": "^4.0.3",
+    "jshint": "^2.11.1",
     "moment": "^2.27.0",
     "moment-duration-format": "^2.3.2",
     "mongoose": "^5.9.20",
@@ -33,12 +35,16 @@
     "num-parse": "^1.0.1",
     "parse-ms": "^2.1.0",
     "quick.db": "^7.1.1",
+    "random-puppy": "^1.1.0",
     "reinstall": "^2.0.0",
     "request": "^2.88.2",
     "request-promise-native": "^1.0.8",
     "simple-youtube-api": "^5.2.1",
+    "soundcloud-downloader": "0.0.9",
+    "superagent": "^5.3.1",
     "weather-js": "^2.0.0",
     "yt-search": "^1.1.2",
-    "ytdl-core": "^2.1.7"
+    "ytdl-core": "^2.1.7",
+    "ytdl-core-discord": "^1.2.1"
   }
 }

@@ -8,7 +8,7 @@ if (
     msg.author.id === "3734242238232002561323"
   ) {
     if (!args[0]) {
-      msg.channel.send(":x: **|** Invalid Arguments.");
+      msg.channel.send("Please Specify a Poll!");
     } else {
       if (!msg.member.nickname) {
         var pollCreator = msg.author.username;
@@ -17,7 +17,7 @@ if (
       }
       let msgArgs = args.slice(0).join(" ");
       const Embed = new Discord.MessageEmbed()
-        .setColor(0xffc300)
+        .setColor("PURPLE")
         .setTitle("📊 Poll - By " + pollCreator)
         .setDescription(`Poll: **${msgArgs}**`)
         .setThumbnail(msg.author.avatarURL())

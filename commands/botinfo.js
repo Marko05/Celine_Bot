@@ -45,7 +45,6 @@ module.exports.run = async(bot, msg, args) => {
         .addField(`Creator`,`Magg#9999`, true)
         .addField(`Servers`, `${servers}`, true)
         .addField(`Users`, `${users}`, true)
-        .addField(`Users`, `${users}`, true)
         .setFooter(`Uptime: ${uptime}`);
 
     msg.channel.send(serverembed);    
