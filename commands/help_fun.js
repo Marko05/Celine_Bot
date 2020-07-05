@@ -20,6 +20,7 @@ const helpembed = new Discord.MessageEmbed()
 .addField(`**\`spank\`** **\`[@user]\`**` , `\`Spanks a user\``)
 .addField(`**\`ngif\`**` , `\`Shows some Neko GIF´s\``)
 .addField(`**\`joke\`**` , `\`Tells you a funny joke\``)
+.addField(`**\`8ball\`** **\`[question]\`**` , `\`Answers a question from you\``)
 .setTimestamp()
 
 
