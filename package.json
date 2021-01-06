@@ -10,7 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "@discordjs/opus": "^0.3.2",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "canvacord": "^3.0.0",
     "canvas": "^2.6.1",
     "cheerio": "^1.0.0-rc.3",
